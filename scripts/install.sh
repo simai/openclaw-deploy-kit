@@ -16,6 +16,7 @@ cd "$ROOT_DIR"
 
 bash scripts/check.sh --profile="$PROFILE"
 bash scripts/configure.sh --profile="$PROFILE"
+bash scripts/harden-bitrix-security.sh
 bash scripts/verify.sh --profile="$PROFILE"
 
 echo "[install] success"

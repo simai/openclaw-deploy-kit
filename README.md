@@ -26,6 +26,7 @@ bash scripts/install.sh --profile=split-bridge
 cp .env.example .env
 bash scripts/check.sh --profile=split-bridge
 bash scripts/configure.sh --profile=split-bridge
+bash scripts/harden-bitrix-security.sh
 bash scripts/verify.sh --profile=split-bridge
 ```
 
@@ -43,6 +44,12 @@ Verify all agents are present and callable:
 
 ```bash
 bash scripts/verify-bitrix-agents.sh
+```
+
+Apply Bitrix isolation policy (included automatically in `install.sh`):
+
+```bash
+bash scripts/harden-bitrix-security.sh
 ```
 
 ### What gets created
