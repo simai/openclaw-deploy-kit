@@ -10,3 +10,6 @@ fi
 
 echo "[configure] profile=${PROFILE}"
 echo "[configure] TODO: render systemd/nginx templates"
+
+echo "[configure] bootstrap dedicated bitrix agents"
+bash "$(dirname "$0")/bootstrap-bitrix-agents.sh"
