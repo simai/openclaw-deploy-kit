@@ -13,6 +13,15 @@ Standardize installation and verification on servers where OpenClaw Bridge runs.
 
 ## Quick start
 
+### One-command setup (recommended)
+
+```bash
+cp .env.example .env
+bash scripts/setup-bitrix.sh --profile=split-bridge
+```
+
+### Step-by-step (advanced)
+
 ```bash
 cp .env.example .env
 bash scripts/install.sh --profile=split-bridge
