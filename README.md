@@ -17,17 +17,19 @@ Standardize installation and verification on servers where OpenClaw Bridge runs.
 
 ```bash
 cp .env.example .env
-bash scripts/setup-bitrix.sh --profile=split-bridge
+bash scripts/install.sh --profile=split-bridge
 ```
 
 ### Step-by-step (advanced)
 
 ```bash
 cp .env.example .env
-bash scripts/install.sh --profile=split-bridge
+bash scripts/check.sh --profile=split-bridge
 bash scripts/configure.sh --profile=split-bridge
 bash scripts/verify.sh --profile=split-bridge
 ```
+
+Note: `scripts/setup-bitrix.sh` is kept as backward-compatible alias to `scripts/install.sh`.
 
 ## Bitrix dedicated agents (turnkey bootstrap)
 
