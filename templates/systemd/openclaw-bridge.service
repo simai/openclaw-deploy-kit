@@ -1,0 +1,16 @@
+[Unit]
+Description=OpenClaw Bridge API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory={{BRIDGE_WORKDIR}}
+Environment=HOST={{BRIDGE_HOST}}
+Environment=PORT={{BRIDGE_PORT}}
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=3
+User=root
+
+[Install]
+WantedBy=multi-user.target
