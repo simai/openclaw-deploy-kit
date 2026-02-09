@@ -19,3 +19,25 @@ bash scripts/install.sh --profile=split-bridge
 bash scripts/configure.sh --profile=split-bridge
 bash scripts/verify.sh --profile=split-bridge
 ```
+
+## Bitrix dedicated agents (turnkey bootstrap)
+
+Create/update dedicated Bitrix agents and apply role templates:
+
+```bash
+bash scripts/bootstrap-bitrix-agents.sh
+```
+
+Verify all agents are present and callable:
+
+```bash
+bash scripts/verify-bitrix-agents.sh
+```
+
+### What gets created
+- `bitrix-router`
+- `bitrix-support`
+- `bitrix-sales`
+- `bitrix-ops`
+
+Role templates are copied to each agent workspace as `AGENTS.md` from `templates/agents/*.AGENTS.md`.
